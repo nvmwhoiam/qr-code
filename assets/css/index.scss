@@ -1,0 +1,77 @@
+@import "./general/root.css";
+@import "./general/base.css";
+@import "./general/mixin.scss";
+
+.main_container {
+    padding: var(--md-p);
+
+    .section_container {
+
+        .section_wrapper {
+            display: flex;
+            gap: var(--md-p);
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            gap: var(--md-p);
+            background-color: var(--background-color-secondary);
+            padding: var(--md-p);
+            border-radius: var(--border-radius-light);
+
+            .flex_header {
+                display: flex;
+                flex-direction: column;
+                gap: var(--md-p);
+
+                .input_wrapper {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        display: block;
+                        margin-bottom: var(--sm-p);
+                    }
+
+                    .qr_code_text {
+                        resize: none;
+                        height: 200px;
+                    }
+                }
+            }
+
+            &.input_container {
+                flex: 1
+            }
+
+            &.qr_container {
+                @include Dflex(center);
+
+                // .qr_wrapper {
+                //     width: 300px;
+                //     height: 300px;
+                //     @include Dflex(center);
+                // }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        & {
+            .section_container {
+                .section_wrapper {
+                    flex-direction: column;
+                }
+
+                .flex_footer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--md-p);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {}
+}

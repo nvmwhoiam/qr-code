@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/index.css">
+    <meta name="description"
+        content="A pure JavaScript QR code generator that creates QR codes from text input. This implementation follows the QR code specification (ISO/IEC 18004) and supports all 40 versions.">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-32x32.png">
+    <meta name="author" content="nvmwhoiam">
+    <meta name="keywords"
+        content="qr code generator, free qr code, scan qr, dynamic qr, qr creator, qr maker, qr reader, qr scanner, vcard qr, custom qr">
+
+    <meta name="robots" content="noindex, nofollow">
+    <title>QRCode</title>
+</head>
+
+<body>
+
+    <main class="main_container">
+
+        <section class="section_container">
+
+            <div class="section_wrapper GRBg2FHmd9">
+
+                <div class="flex input_container">
+
+                    <div class="flex_header">
+                        <div class="input_wrapper">
+                            <label for="qrCodeText" aria-label="Enter text or URL ">Enter text or URL:</label>
+                            <textarea class="qr_code_text" id="qrCodeText"
+                                placeholder="Enter text, URL, email, phone number, or any content you want to encode in QR code...">https://sadevworks.com</textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex_footer">
+
+                        <button type="button" class="btn_btn" data-button="download_svg" aria-label="Download SVG">
+                            Download SVG
+                        </button>
+
+                        <button type="button" class="btn_primary" data-button="generate_code"
+                            aria-label="Generate QR Code">
+                            Generate QR Code
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="flex qr_container">
+
+                    <div class="qr_wrapper">
+                        <div id="svg-container"></div>
+                    </div>
+
+                    <div class="qr_details">
+                        <p>Version: <span id="version"></span></p>
+                        <p>Mask Pattern: <span id="mask_pattern"></span></p>
+                        <p>ECC Level: <span id="ecc_level"></span></p>
+                        <p>Matrix Size: <span id="matrix_size"></span></p>
+                        <p>Mode: <span id="mode"></span></p>
+                        <p>Text Length: <span id="length"></span></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="assets/js/index.js"></script>
+
+</body>
+
+</html>
